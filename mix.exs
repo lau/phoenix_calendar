@@ -1,7 +1,7 @@
 defmodule PhoenixCalendar.Mixfile do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [app: :phoenix_calendar,
@@ -18,7 +18,7 @@ defmodule PhoenixCalendar.Mixfile do
 
   defp deps do
     [{:phoenix_html, "~> 2.0", optional: true},
-     {:calendar, "~> 0.9"},
+     {:calendar, "~> 0.9 or ~> 0.10.0"},
     ]
   end
 

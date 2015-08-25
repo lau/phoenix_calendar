@@ -10,7 +10,7 @@ with Phoenix HTML.
 ```elixir
 defp deps do
   [
-   {:phoenix_calendar, "~> 0.1.0"},
+   {:phoenix_calendar, "~> 0.1.1"},
   ]
 end
 ```
