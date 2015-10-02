@@ -23,7 +23,7 @@ defmodule PhoenixCalendar.Mixfile do
   end
 
   defp package do
-    [contributors: ["Lau Taarnskov"],
+    [maintainers: ["Lau Taarnskov"],
      licenses: ["Apache 2.0"],
      links: %{"GitHub" => "https://github.com/lau/phoenix_calendar"},
     ]
