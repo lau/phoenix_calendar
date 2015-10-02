@@ -16,8 +16,8 @@ is the `mix.exs` file.
 ```elixir
 defp deps do
   [
-   {:phoenix_calendar, "~> 0.1.1"},
-   {:calecto, "~> 0.3.9"},
+   {:phoenix_calendar, "~> 0.1.2"},
+   {:calecto, "~> 0.4.0"},
   ]
 end
 ```
