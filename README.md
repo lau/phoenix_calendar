@@ -37,7 +37,7 @@ Also add `tzdata` to the list of applications in the `mix.exs` file:
 
 In `web/web.ex`:
 
-Add `use Calendar` for aliases so that in your views, controllers and models you can use `Time`, `Date`, `DateTime`, `NaiveDateTime`, `Strftime`
+Add `use Calendar` for aliases so that in your views, controllers, channels and models you can use `Time`, `Date`, `DateTime`, `NaiveDateTime`, `Strftime`
 without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you can just use `DateTime.now_utc`.
 
 ```elixir
@@ -52,6 +52,14 @@ without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you
   def controller do
     quote do
       use Phoenix.Controller
+      use Calendar
+  #.....
+```
+
+```elixir
+  def channel do
+    quote do
+      use Phoenix.Channel
       use Calendar
   #.....
 ```
