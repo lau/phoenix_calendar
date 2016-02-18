@@ -24,12 +24,13 @@ end
 
 Then run `mix deps.get` which will fetch the new packages via the hex package manager.
 
-Also add `tzdata` to the list of applications in the `mix.exs` file:
+Also add `calendar`, `calecto` and `phoenix_calendar` to the list of applications in the `mix.exs` file:
 
 ```elixir
   def application do
     [applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :tzdata]]
+                    :phoenix_ecto, :postgrex,
+                    :calendar, :calecto, :phoenix_calendar ]]
   end
 ```
 
@@ -39,6 +40,16 @@ In `web/web.ex`:
 
 Add `use Calendar` for aliases so that in your views, controllers, channels and models you can use `Time`, `Date`, `DateTime`, `NaiveDateTime`, `Strftime`
 without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you can just use `DateTime.now_utc`.
+
+```elixir
+  def model do
+    quote do
+      use Ecto.Schema
+      use Calecto.Model, usec: true
+      use Calendar
+    end
+  end
+```
 
 ```elixir
   def view do
@@ -62,16 +73,6 @@ without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you
       use Phoenix.Channel
       use Calendar
   #.....
-```
-
-```elixir
-  def model do
-    quote do
-      use Ecto.Model
-      use Calecto.Model, usec: true
-      use Calendar
-    end
-  end
 ```
 
 For models we also add a line to use Calecto.Model. This adds Calendar
