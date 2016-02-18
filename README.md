@@ -18,6 +18,7 @@ defp deps do
   [
    {:phoenix_calendar, "~> 0.1.2"},
    {:calecto, "~> 0.5.0"},
+   {:calendar, "~> 0.12"},
   ]
 end
 ```
@@ -47,8 +48,7 @@ without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you
       use Ecto.Schema
       use Calecto.Model, usec: true
       use Calendar
-    end
-  end
+  #.....
 ```
 
 ```elixir
@@ -74,9 +74,6 @@ without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you
       use Calendar
   #.....
 ```
-
-For models we also add a line to use Calecto.Model. This adds Calendar
-functionality to the Ecto models.
 
 ## Ecto not required
 
