@@ -35,43 +35,16 @@ Also add `calendar`, `calecto` and `phoenix_calendar` to the list of application
   end
 ```
 
-## Making Calendar easier to use in Phoenix with the use macro
+## Making all Phoenix models use Calecto.Schema
 
 In `web/web.ex`:
 
-Add `use Calendar` for aliases so that in your views, controllers, channels and models you can use `Time`, `Date`, `DateTime`, `NaiveDateTime`, `Strftime`
-without prefixing them with Calendar. Instead of `Calendar.DateTime.now_utc` you can just use `DateTime.now_utc`.
 
 ```elixir
   def model do
     quote do
       use Ecto.Schema
-      use Calecto.Model, usec: true
-      use Calendar
-  #.....
-```
-
-```elixir
-  def view do
-    quote do
-      use Phoenix.View, root: "web/templates"
-      use Calendar
-  #.....
-```
-
-```elixir
-  def controller do
-    quote do
-      use Phoenix.Controller
-      use Calendar
-  #.....
-```
-
-```elixir
-  def channel do
-    quote do
-      use Phoenix.Channel
-      use Calendar
+      use Calecto.Schema, usec: true
   #.....
 ```
 
