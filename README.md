@@ -10,7 +10,7 @@ with Phoenix HTML. This will solve errors such as:
 
 ## Elixir 1.3, Phoenix 1.2 and Calendar 0.16+
 
-*For Calendar 0.16.0 and up, this library is not needed in Phoenix 1.2 and up.*
+**For Calendar 0.16.0 and up, this library is not needed in Phoenix 1.2 and up.**
 
 ## Example installation with Calendar, Phoenix and Ecto
 
