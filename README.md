@@ -8,9 +8,9 @@ structs such as Date, Time, DateTime, NaiveDateTime
 with Phoenix HTML. This will solve errors such as:
 `protocol Phoenix.HTML.Safe not implemented for %Calendar.DateTime`
 
-## Elixir 1.3 and Calendar 0.16+
+## Elixir 1.3, Phoenix 1.2 and Calendar 0.16+
 
-*For Calendar 0.16.0 and up, this library is not needed.*
+*For Calendar 0.16.0 and up, this library is not needed in Phoenix 1.2 and up.*
 
 ## Example installation with Calendar, Phoenix and Ecto
 
