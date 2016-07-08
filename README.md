@@ -8,6 +8,10 @@ structs such as Date, Time, DateTime, NaiveDateTime
 with Phoenix HTML. This will solve errors such as:
 `protocol Phoenix.HTML.Safe not implemented for %Calendar.DateTime`
 
+## Elixir 1.3 and Calendar 0.16+
+
+*For Calendar 0.16.0 and up, this library is not needed.*
+
 ## Example installation with Calendar, Phoenix and Ecto
 
 Add `:phoenix_calendar` and `:calecto` to your deps function
@@ -17,8 +21,8 @@ is the `mix.exs` file.
 defp deps do
   [
    {:phoenix_calendar, "~> 0.1.2"},
-   {:calecto, "~> 0.16"},
-   {:calendar, "~> 0.16"},
+   {:calecto, "~> 0.5.2"},
+   {:calendar, "~> 0.13"},
   ]
 end
 ```
