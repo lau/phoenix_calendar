@@ -17,8 +17,8 @@ is the `mix.exs` file.
 defp deps do
   [
    {:phoenix_calendar, "~> 0.1.2"},
-   {:calecto, "~> 0.5.2"},
-   {:calendar, "~> 0.13"},
+   {:calecto, "~> 0.16"},
+   {:calendar, "~> 0.16"},
   ]
 end
 ```
