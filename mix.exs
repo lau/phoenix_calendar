@@ -7,9 +7,9 @@ defmodule PhoenixCalendar.Mixfile do
     [app: :phoenix_calendar,
      version: @version,
      elixir: "~> 1.0",
-     package: package,
+     package: package(),
      description: "Integration between Phoenix & Calendar",
-     deps: deps]
+     deps: deps()]
   end
 
   def application do
